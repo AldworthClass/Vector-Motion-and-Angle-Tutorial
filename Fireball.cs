@@ -17,17 +17,18 @@ namespace Vector_Motion_and_Angle_Tutorial
         private int _speed;
         private int _size;
 
-        public Fireball(Texture2D texture, Vector2 location, Vector2 target)
+        public Fireball(Texture2D texture, Vector2 location, Vector2 target, int size)
         {
-            _size = 10;
+            _size = size;
             _texture = texture;
             _location = location;
             _rect = new Rectangle(location.ToPoint(), new Point(_size, _size));
             _direction = target - location;
             _direction.Normalize();
-            _speed = 2;
+            _speed = 5;
         }
 
+        // Allows read access to the location Rectangle for collision detection
         public Rectangle Rect
         {
             get { return _rect; }

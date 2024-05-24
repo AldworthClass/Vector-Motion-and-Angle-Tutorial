@@ -64,7 +64,7 @@ namespace Vector_Motion_and_Angle_Tutorial
             // TODO: Add your update logic here
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
-                fireballs.Add(new Fireball(fireballTexture, tankRect.Center.ToVector2(), mouseState.Position.ToVector2()));
+                fireballs.Add(new Fireball(fireballTexture, tankRect.Center.ToVector2(), mouseState.Position.ToVector2(), 10));
             }
 
             for (int i = 0; i < fireballs.Count; i++)
